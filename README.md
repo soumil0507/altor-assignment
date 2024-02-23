@@ -145,3 +145,87 @@ Mentioned below are the different endpoints for the same
         }
     ]
     ```
+#### API for the charts
+4. List device brand distribution zone wise
+    
+    `GET /distribution/device_brand`
+
+    if zone not specified it will return all the device_brand distribution
+    if zone is specified it will return the device_brand distribution for that specific zone
+    you can mention multiple zones as well
+
+    Parameters:
+    
+    - zone: string
+
+    Response:
+
+    When zone not specified
+    ```
+    [
+        {
+        "count": 1,
+        "device_brand": "Asus"
+        },
+        {
+        "count": 8,
+        "device_brand": "Infinix"
+        },
+        {
+        "count": 1,
+        "device_brand": "Infinix Mobility Limited"
+        },
+        {
+        "count": 25,
+        "device_brand": "Motorola"
+        }
+    ]
+    ```
+
+    When 1 zone is specified
+    ```
+    [
+        {
+        "count": 1,
+        "device_brand": "Asus"
+        },
+        {
+        "count": 8,
+        "device_brand": "Infinix"
+        },
+        {
+        "count": 1,
+        "device_brand": "Infinix Mobility Limited"
+        },
+        {
+        "count": 25,
+        "device_brand": "Motorola"
+        }
+    ]
+    ```
+
+    When more than 1 zone is specified
+    ```
+    [
+        {
+        "count": 1,
+        "device_brand": "Asus",
+        "zone": "Zone_1"
+        },
+        {
+        "count": 3,
+        "device_brand": "Infinix",
+        "zone": "Zone_1"
+        },
+        {
+        "count": 3,
+        "device_brand": "Infinix",
+        "zone": "Zone_2"
+        },
+        {
+        "count": 1,
+        "device_brand": "Infinix",
+        "zone": "Zone_3"
+        }
+    ]
+    ```
