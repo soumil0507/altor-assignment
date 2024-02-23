@@ -52,9 +52,9 @@ def get_zone_data():
     filter = request.json
 
     try:
-        # data = Config.query.filter_by(zone = zone).all()
-
+        
         query = Config.query
+
         for filter_key, filter_value in filter.items():
             print(getattr(Config, filter_key))
             # quey = query.filter_by(**{filter_key: filter_value})
