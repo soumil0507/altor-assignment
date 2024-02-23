@@ -46,7 +46,7 @@ def get_user_data(username):
 
 # get table data by zone, device_brand, vehicle_brand, vehicle_cc, sdk_int
 # applying dynamic filter
-@table_data_bp.route("/get_filter_data", methods = ["GET", "POST"])
+@table_data_bp.route("/get_filter_data", methods = ["POST"])
 def get_zone_data():
 
     filter = request.json
