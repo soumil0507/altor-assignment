@@ -145,22 +145,3 @@ Mentioned below are the different endpoints for the same
         }
     ]
     ```
-
-
-
-
-
-```
-    function FilterComponent() {
-    const [filters, setFilters] = useState({
-        // Initialize your filter conditions here
-        // For example:
-        username: '',
-        device_brand: '',
-        sdk_int: '',
-        vehicle_brand: '',
-        vehicle_cc: '',
-        zone: ''
-        // Add more filter conditions as needed
-    });
-```
